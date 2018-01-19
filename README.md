@@ -34,7 +34,7 @@ php composer.phar require --prefer-dist "ethercap/watermark" "1.0.0"
 \ethercap\watermark\WaterMark::widget([]);
 ```
 会出现如下的水印：
-
+![image](./docs/img/example.png)
 
 
 如果对默认的参数不满意，可以通过参数修改配置：   
