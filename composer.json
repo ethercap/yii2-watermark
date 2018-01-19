@@ -10,17 +10,10 @@
         }
     ],
     "require": {
-        "saucxs/watermark": "*"
     },
     "autoload": {
         "psr-4": {
             "ethercap\\watermark\\": "src/"
         }
     },
-    "repositories": [ 
-        {
-            "type": "vcs",
-            "url": "https://github.com/saucxs/watermark.git"
-        }
-    ]
 }
