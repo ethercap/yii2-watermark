@@ -1,6 +1,7 @@
 <?php
 namespace ethercap\watermark;
 
+use yii\web\AssetBundle;
 /**
  * Asset bundle for [[WaterMark]] widget
  *
@@ -9,13 +10,8 @@ namespace ethercap\watermark;
  */
 class WaterMarkAsset extends AssetBundle
 {
-    /**
-     * @inheritdoc
-     */
-    public function init()
-    {
-        $this->setSourcePath(__DIR__ . '/assets');
-        $this->setupAssets('js', ['js/water.js']);
-        parent::init();
-    }
+    public $sourcePath = __DIR__ . '/assets';
+    public $js = [
+        'js/watermark.js' 
+    ];
 }
