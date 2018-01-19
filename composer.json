@@ -1,0 +1,26 @@
+{
+    "name": "ethercap/watermark",
+    "description": "用来给内部系统打水印的包",
+    "license": "MIT",
+    "keywords": ["yii2", "extension", "watermark"],
+    "authors": [
+        {
+            "name": "李仕鹏",
+            "email": "lspbupt@sina.com"
+        }
+    ],
+    "require": {
+        "saucxs/watermark": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ethercap\\watermark\\": "src/"
+        }
+    },
+    "repositories": [ 
+        {
+            "type": "vcs",
+            "url": "https://github.com/saucxs/watermark.git"
+        }
+    ]
+}
