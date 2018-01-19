@@ -1,8 +1,34 @@
 # yii2-watermark
 
-## 安装
 
-## 使用
+yii2框架的水印代码，可以自动给页面打水印。 
+
+前端代码主要来自于https://github.com/saucxs/watermark，感谢saucxs的付出，如有版权问题，欢迎联系我！
+
+在此处可以查看本扩展的[许可](LICENSE.md)  
+
+
+安装
+------------
+
+推荐的方式是通过composer 进行下载安装[composer](http://getcomposer.org/download/)。  
+
+在命令行执行  
+```
+php composer.phar require --prefer-dist "ethercap/watermark" "1.0.0"
+```
+
+或加入  
+
+```
+"ethercap/watermark": "1.0.0"
+```
+
+到你的`composer.json`文件中的require段。  
+
+
+使用
+--------------
 在后台需要有水印的页面上，加入如下的代码即可：
 ```php
 \ethercap\watermark\WaterMark::widget([]);
