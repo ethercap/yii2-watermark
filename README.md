@@ -5,7 +5,6 @@ yii2框架的水印代码，可以自动给页面打水印。
 
 前端代码主要来自于https://github.com/saucxs/watermark ，感谢saucxs的付出，如有版权问题，欢迎联系我！
 
-在此处可以查看本扩展的[许可](LICENSE.md)  
 
 
 安装
@@ -15,7 +14,7 @@ yii2框架的水印代码，可以自动给页面打水印。
 
 在命令行执行  
 ```
-php composer.phar require --prefer-dist "ethercap/watermark" "1.0.0"
+php composer.phar require "ethercap/watermark" "1.0.0"
 ```
 
 或加入  
