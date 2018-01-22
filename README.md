@@ -14,7 +14,7 @@ yii2框架的水印代码，可以自动给页面打水印。
 
 在命令行执行  
 ```
-php composer.phar require "ethercap/watermark" "1.0.0"
+php composer.phar require "ethercap/watermark" "1.0.1"
 ```
 
 或加入  
