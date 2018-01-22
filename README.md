@@ -20,7 +20,7 @@ php composer.phar require "ethercap/watermark" "1.0.0"
 或加入  
 
 ```
-"ethercap/watermark": "1.0.0"
+"ethercap/watermark": "1.0.1"
 ```
 
 到你的`composer.json`文件中的require段。  
@@ -57,3 +57,6 @@ php composer.phar require "ethercap/watermark" "1.0.0"
 ]);
 ```
 
+广告
+--------------
+    我们是一群热爱技术，追求卓越的极客，我们乐于做一些对整个社会都有作用的事情，我们希望通过我们的努力来推动整个社会的创新，如果你也一样，欢迎加入我们（service@ethercap.com）！

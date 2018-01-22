@@ -85,6 +85,14 @@
             defaultSettings.watermark_y_space = parseInt(((page_height - defaultSettings.watermark_y) - defaultSettings.watermark_height * defaultSettings.watermark_rows) / (defaultSettings.watermark_rows - 1));
         }
 
+        //如果还是为0，代表屏幕宽度过小(手机)，此时设置为1
+        if(defaultSettings.watermark_rows == 0) {
+            defaultSettings.watermark_rows = 1;
+        }
+        //如果还是为0，代表屏幕高度过小(手机)，此时设置为1
+        if(defaultSettings.watermark_cols == 0) {
+            defaultSettings.watermark_cols = 1;
+        }
         var x;
         var y;
         for (var i = 0; i < defaultSettings.watermark_rows; i++) {
