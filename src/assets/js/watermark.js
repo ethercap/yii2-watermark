@@ -51,13 +51,17 @@
 
         //创建水印外壳div
         var otdiv = document.getElementById(defaultSettings.watermark_id);
+        var shadowRoot;
         if(!otdiv){
             otdiv = document.createElement('div');
             //创建shadow dom
             otdiv.id = defaultSettings.watermark_id;
             otdiv.style.pointerEvents = "none";
             //判断浏览器是否支持createShadowRoot方法
-            if(typeof otdiv.createShadowRoot === 'function'){
+            //[Deprecation] Element.createShadowRoot is deprecated and will be removed in M73, around March 2019. Please use Element.attachShadow instead
+            if (typeof otdiv.attachShadow === 'function') {
+                shadowRoot = otdiv.attachShadow({mode: 'open'});
+            } else if(typeof otdiv.createShadowRoot === 'function'){
                 shadowRoot = otdiv.createShadowRoot();
             }else{
                 shadowRoot = otdiv;
