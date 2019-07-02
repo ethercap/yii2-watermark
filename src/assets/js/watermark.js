@@ -20,6 +20,11 @@
             watermark_angle:15,            //水印倾斜度数
         };
 
+        var heigtOffset = function(width, height, angle) {
+            var radian =  angle/180*Math.PI;
+            return (width*Math.sin(radian) + height*Math.cos(radian) - height)/2;
+        }
+
         //采用配置项替换默认值，作用类似jquery.extend
         if(arguments.length === 1&&typeof arguments[0] ==="object" )
         {
@@ -96,7 +101,7 @@
         var x;
         var y;
         for (var i = 0; i < defaultSettings.watermark_rows; i++) {
-            y = defaultSettings.watermark_y + (defaultSettings.watermark_y_space + defaultSettings.watermark_height) * i;
+            y = defaultSettings.watermark_y + (defaultSettings.watermark_y_space + defaultSettings.watermark_height) * i - heigtOffset(defaultSettings.watermark_width, defaultSettings.watermark_height, defaultSettings.watermark_angle);
             for (var j = 0; j < defaultSettings.watermark_cols; j++) {
                 x = defaultSettings.watermark_x + (defaultSettings.watermark_width + defaultSettings.watermark_x_space) * j;
 
