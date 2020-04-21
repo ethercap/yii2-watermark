@@ -144,10 +144,11 @@
     };
     //初始化水印，添加load和resize事件
     watermark.init = function(settings) {
+        watermark.settings = settings;
         window.addEventListener('load',function () {
             loadMark(settings);
         });
-        window.addEventListener('onrize',function () {
+        window.addEventListener('onresize',function () {
             loadMark(settings);
         });
         window.addEventListener('DOMContentLoaded',function () {
@@ -156,7 +157,12 @@
     };
     //手动加载水印
     watermark.load = function(settings){
+        watermark.settings = settings;
         loadMark(settings);
     };
 
-})(window.watermark = {} );
+    watermark.refresh = function(){
+        loadMark(watermark.settings);
+    }
+
+})(window.watermark = {});
